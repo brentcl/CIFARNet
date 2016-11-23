@@ -100,6 +100,7 @@ object Driver {
     val conf = builder.build()
     val model = new MultiLayerNetwork(conf)
     model.init()
+    val data = ImagePipeline.pipeline("C:/Users/Brent/Documents/School/DataPrac/cifar10/train/")
 
   }
 
