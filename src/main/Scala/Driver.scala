@@ -102,6 +102,24 @@ object Driver {
     model.init()
     val data = ImagePipeline.pipeline("C:/Users/Brent/Documents/School/DataPrac/cifar10/train/")
 
+    println("Train model....")
+    model.setListeners(new ScoreIterationListener(1))
+    //model.setListeners(new HistogramIterationListener(1))
+    (0 until nEpochs).foreach { i =>
+      model.fit(data._1)
+      println("*** Completed epoch {} ***", i)
+
+      println("Evaluate model....")
+      val eval = new Evaluation(outputNum)
+      while (data._2.hasNext) {
+        val ds = data._2.next()
+        val output = model.output(ds.getFeatureMatrix, false)
+        eval.eval(ds.getLabels, output)
+      }
+      println(eval.stats())
+      data._2.reset()
+    }
+
   }
 
 }
