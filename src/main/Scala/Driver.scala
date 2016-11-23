@@ -97,6 +97,10 @@ object Driver {
       .setInputType(InputType.convolutionalFlat(32,32,3))
       .backprop(true).pretrain(false)
 
+    val conf = builder.build()
+    val model = new MultiLayerNetwork(conf)
+    model.init()
+
   }
 
 }
