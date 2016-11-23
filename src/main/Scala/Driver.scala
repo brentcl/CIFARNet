@@ -27,22 +27,22 @@ object Driver {
   def main(args: Array[String]): Unit = {
 
     //Nd4j.dtype = DataBuffer.Type.DOUBLE
-    Nd4j.factory().setDType(DataBuffer.Type.DOUBLE)
-    Nd4j.ENFORCE_NUMERICAL_STABILITY = true
+    //Nd4j.factory().setDType(DataBuffer.Type.DOUBLE)
+    //Nd4j.ENFORCE_NUMERICAL_STABILITY = true
 
     val nChannels = 3
     val outputNum = 10
     val batchSize = 64
     val nEpochs = 10
     val iterations = 1
-    val seed = 12345
+    //val seed = 12345
     val learnRate = .0001
     val dropOutRetainProbability = .9
 
 
     println("Build model....")
     val builder: MultiLayerConfiguration.Builder = new NeuralNetConfiguration.Builder()
-      .seed(seed)
+      .seed(12345)
       .iterations(iterations)
       .regularization(true).l2(0.0005)
       .learningRate(learnRate)
