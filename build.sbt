@@ -20,7 +20,6 @@ libraryDependencies ++= Seq(
   "org.deeplearning4j" % "arbiter-deeplearning4j" % "0.0.0.8",
   "org.deeplearning4j" % "deeplearning4j-core" % "0.7.0",
   "org.deeplearning4j" % "deeplearning4j-nlp" % "0.7.0",
-  "org.deeplearning4j" % "deeplearning4j-ui" % "0.7.0",
 
   "org.jblas" % "jblas" % "1.2.4",
 
