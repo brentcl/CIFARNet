@@ -1,4 +1,4 @@
-name := "SeeSnake"
+name := "CIFARNet"
 version := "0.1"
 scalaVersion := "2.12"
 classpathTypes += "maven-plugin"
