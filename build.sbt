@@ -1,6 +1,6 @@
 name := "CIFARNet"
 version := "0.1"
-scalaVersion := "2.12"
+scalaVersion := "2.11.8"
 classpathTypes += "maven-plugin"
 resolvers ++= commonResolvers
 
@@ -23,11 +23,13 @@ libraryDependencies ++= Seq(
 
   "org.jblas" % "jblas" % "1.2.4",
 
-  "org.nd4j" % "nd4j-native-platform" % "0.6.0"
+  //"org.nd4j" % "nd4j-native-platform" % "0.6.0"
+
+  "org.nd4j" % "nd4j-native" % "0.4-rc3.10"
 )
 
 lazy val commonResolvers = Seq(
   "Sonatype OSS Snapshots" at "https://oss.sonatype.org/content/repositories/snapshots",
   "Sonatype release Repository" at "http://oss.sonatype.org/service/local/staging/deploy/maven2/",
-  "Local Maven Repository" at "file:///"+Path.userHome.absolutePath+"/Documents/apache-maven-3.3.9/repository"
+  "Local Maven Repository" at "file:///C:/Users/Brent/Documents/apache-maven-3.3.9/repository"
 )
